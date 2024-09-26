@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painting - my hobby 🎨🖌️</title>
+  <style>
+    body {
+      background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    }
+
+    .shecodes {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      display: block;
+      padding: 15px 20px;
+      border-radius: 20px;
+      border: 1px solid #ace0f9;
+      transition: all 150ms ease-in-out;
+      cursor: pointer;
+    }
+
+    .darkTheme {
+      color: white;
+      background: black;
+    }
+
+    .darkTheme:hover {
+      background: white;
+      color: black;
+    }
+
+    .div {
+      display: block;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      background: white;
+      padding: 20px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .images {
+      grid-template-columns: 500px;
+      display: block;
+      margin: auto;
+      width: 500px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .colors {
+      border-radius: 10px;
+      transition: transform 150ms ease-in-out;
+    }
+
+    .colors:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+
+    .learn {
+      border-radius: 30px ;;
+      background: #fff1ebf5;
+      font-size: 24px;
+    }
+
+    .learn:hover {
+      background-color:  #ace0f9;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .grids {
+      margin: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .grids img {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+
+    .dark {
+      color: white;
+      background: linear-gradient(1.3deg, rgb(91, 117, 163) 11.4%, rgb(68, 98, 128) 77%);
+    }
+
+    .dark a {
+      color: bisque;
+    }
+
+    .dark .div {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="https://www.shecodes.io/" target="_blank"><img class="shecodes"
+        src="https://www.shecodes.io/assets/branding/logo-shecodes-3dfa60aeab8ef361842da5a2b6d46db3af1b7afafefee3dde0a9846389de754b.png"
+        alt=""></a></h1>
+  <button class="darkTheme">Dark theme</button>
+  <div class="div">
+    <h1>🎨🖌️ How to paint?</h1>
+    <h2>My favorite hobby</h2>
+    <div class="images">
+      <a href="https://www.britannica.com/art/painting" target="_blank"><img
+          src="https://s32625.pcdn.co/wp-content/uploads/2024/03/ARN_Is-My-Painting-Finished_HDR-624x328.jpg" alt=""
+          class="colors"></a>
+      <div class="grids">
+        <img src="https://i.pinimg.com/564x/2b/58/3a/2b583a3295b73ab6dd626f952b21fa09.jpg" alt="girl ">
+        <img src="https://i.pinimg.com/564x/8d/49/b5/8d49b50a2d081e569ec67bf029816fc4.jpg" alt="siblings ">
+        <img src="https://i.pinimg.com/564x/d6/93/7a/d6937adb2e6c880f6d534d4a2878a548.jpg" alt="raft ">
+        <img src="https://i.pinimg.com/564x/0f/75/26/0f7526907a3e2de84dd83b8b8642113a.jpg" alt="trees">
+      </div>
+    </div>
+    <div class="para">
+      <p>Painting is a visual art, which is characterized by the practice of applying paint, pigment, color or other
+        medium to
+        a solid surface. The medium is commonly applied to the base with a brush, but
+        other implements, such as knives, sponges, and airbrushes, may be used.</p>
+      <p>📖<a href="https://en.wikipedia.org/wiki/Painting" target="_blank"> Read more</a></p>
+      <button class="learn">Learn painting</button>
+      <br>
+    </div>
+  </div>
+  <footer>
+    <p>Coded with 💜 by <a href="https://www.shecodes.io/" target="_blank">Feven Muluken Ejigu</a></p>
+  </footer>
+  <script>
+    function themeChange() {
+      let body = document.querySelector("body");
+      if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+      }
+      else {
+        body.classList.add("dark");
+      }
+    }
+    let button = document.querySelector(".darkTheme");
+    button.addEventListener("click", themeChange)
+
+    function learners(){
+      let toLearn = document.querySelector("learn");
+      prompt("Have you try to paint before?");
+      prompt("What is your name?");
+      prompt("What is your email?");
+      alert("Thanks we will be in touch with email.")
+    }
+    let learn = document.querySelector(".learn")
+    learn.addEventListener("click", learners)
+  </script>
+</body>
+
+</html>
